@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        h3{
+            padding: 10px;
+            /* margin: 2px; */
+        }
+        form  .text1 {
+            /* padding: 8px; */
+            margin: 12px;
+            width: 300px;
+        }
+        form  .btn{
+            /* width: 30px; */
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h3>GUESS THE GENERATE NUMBER BY COMPUTER</h3>
+    <h3 id="display">
+
+    </h3> 
+    <form >
+        <input class="text1" type="text" placeholder="enter your guess  number" id="usernum">
+        <!-- <input type="search" name="" id=""> -->
+        <!-- <input type="submit" value="search"> -->
+        <input class="btn" type="button" value="search" onclick="check()">
+    </form>
+    <script>
+        const usernum=document.getElementById("usernum")
+        const computernum=Math.floor(Math.random()*10)
+        // console.log(computernum);
+        const display=document.getElementById('display')
+        function check()
+        {
+            // while(1)
+            {
+                if(usernum.value==computernum)
+        {
+            display.textContent="yeah you have won"
+            display.style.display="block"
+            display.style.color='green'
+            display.style.display="inline-block"
+            display.style.border=' 2px solid black'
+            display.style.border=' 2px solid black'
+            display.style.fontSize='30px'
+        }
+        else if(usernum.value>computernum)
+        {
+            display.textContent="your input is greter than computer value"
+            // displa.style.color='yellow'
+            display.style.color='red'
+            display.style.fontSize='30px'
+            display.style.fontSize='30px'
+            display.style.border=' 2px solid black'
+            display.style.display="inline-block"
+            
+        }
+        else if(usernum.value<computernum)
+        {
+            display.textContent="your input is less than computer value"
+            // displa.style.color='yellow'
+            display.style.fontSize='30px'
+            display.style.color='black'
+            display.style.display="inline-block"
+            display.style.border=' 2px solid black'
+            
+        }
+        else{
+            display.textContent="Sorry you have lose"
+            display.style.display="block"
+            display.style.color='red'
+            display.style.fontSize='30px'
+            display.style.border=' 2px solid black'
+            display.style.display="inline-block"
+        }
+        // display.textContent=''
+    }        
+    }
+    // confirm
+    // console.log(computernum);
+    </script>
+</body>
+</html>
